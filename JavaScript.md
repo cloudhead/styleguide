@@ -143,7 +143,7 @@ so that's where they belong.
 
 ## Semicolons
 
-- **RULE**: Semicolons `;` **must** be added at the end of every statement, **except** when preceding a closing bracket `}`.
+- **RULE**: Semicolons `;` **must** be added at the end of every statement, **except** when the next character is a closing bracket `}`.
 - **REASON**: That's what Jesus would have wanted.
 
 
@@ -204,7 +204,7 @@ so that's where they belong.
 
   if (x) {
       return true;
-  };
+  }
 
 ```
 
