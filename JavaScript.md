@@ -2,7 +2,7 @@
 
 ## Identifiers
 
-**rule**: Identifiers bound to contructor functions **must** start with a capital.
+- **RULE**: Identifiers bound to contructor functions **must** start with a capital.
 
 ### GOOD
 
@@ -28,7 +28,7 @@
 
 ```
 
-**rule**: Identifiers bound to a variable **must** be CamelCased, and start with a lowercase letter.
+- **RULE**: Identifiers bound to a variable **must** be CamelCased, and start with a lowercase letter.
 
 ### GOOD
 
@@ -48,8 +48,8 @@
 
 ## Variable declarations
 
-**rule**: Always declare variables at the *top* of functions.
-**reason:**: Variable declarations are moved up to the top of the function scope anyway,
+- **RULE**: Always declare variables at the *top* of functions.
+- **REASON:**: Variable declarations are moved up to the top of the function scope anyway,
 so that's where they belong.
 
 ### GOOD
@@ -57,10 +57,10 @@ so that's where they belong.
 ```javascript
 
   function (a, b) {
-      var k;  
+      var k;
 
       if (a == b) {
-          k = true;  
+          k = true;
       }
       ...
   }
@@ -73,7 +73,7 @@ so that's where they belong.
 
   function (a, b) {
       if (a == b) {
-          var k = true;  
+          var k = true;
       }
       ...
   }
@@ -82,8 +82,8 @@ so that's where they belong.
 
 ## Functions
 
-**rule**: Anonymous functions **should** have a space between the `function` keyword and the left parenthesis.
-**reason**: To emphasise the lack of the anonimity and differentiate them with named functions.
+- **RULE**: Anonymous functions **should** have a space between the `function` keyword and the left parenthesis.
+- **REASON**: To emphasise the lack of the anonimity and differentiate them with named functions.
 
 ### GOOD
 
@@ -101,8 +101,8 @@ so that's where they belong.
 
 ```
 
-**rule**: Named functions **should not** have a space between the function name and the left parenthesis.
-**reason**: See above.
+- **RULE**: Named functions **should not** have a space between the function name and the left parenthesis.
+- **REASON**: See above.
 
 ### GOOD
 
@@ -122,8 +122,8 @@ so that's where they belong.
 
 ## Semicolons
 
-**rule**: Semicolons `;` **must** be added at the end of every statement, **except** when preceding a closing bracket `}`. 
-**reason**: That's what Jesus would have wanted.
+- **RULE**: Semicolons `;` **must** be added at the end of every statement, **except** when preceding a closing bracket `}`.
+- **REASON**: That's what Jesus would have wanted.
 
 ### GOOD
 
@@ -131,7 +131,7 @@ so that's where they belong.
 
   var f = function add(a, b) {
       if (a == b) { return a * 2 } // No `;` here.
-      return a + b; 
+      return a + b;
   };
 
 ```
@@ -149,8 +149,8 @@ so that's where they belong.
 
 ## Braces
 
-**rule**: Braces **must** be used in all circumstances. 
-**reason**: JavaScript uses braces to structure code.
+- **RULE**: Braces **must** be used in all circumstances.
+- **REASON**: JavaScript uses braces to structure code.
 
 ### GOOD
 
@@ -173,8 +173,8 @@ so that's where they belong.
       return true;
 
 ```
-**rule**: Braces **must never** be on a line of their own.
-**reason**: It wastes screen space.
+- **RULE**: Braces **must never** be on a line of their own.
+- **REASON**: It wastes screen space.
 
 ### GOOD
 
