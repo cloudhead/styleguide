@@ -80,6 +80,28 @@ so that's where they belong.
 
 ```
 
+## Control-flow
+
+- **RULE**: Control-flow statements, such as `if`, `while` and `for` **must** have a space between the keyword and the left parenthesis.
+- **REASON**: To differentiate them with function calls.
+
+```javascript
+  // GOOD
+
+  if (a) {
+      return true;
+  }
+
+```
+```javascript
+  // BAD
+
+  if(a) {
+      return true;
+  }
+
+```
+
 ## Functions
 
 - **RULE**: Anonymous functions **should** have a space between the `function` keyword and the left parenthesis.
