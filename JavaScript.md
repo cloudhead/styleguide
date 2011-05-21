@@ -2,8 +2,7 @@
 
 ## Identifiers
 
-- **RULE**: Identifiers bound to contructor functions **must** start with a capital.
-
+- **RULE**: Identifiers bound to constructors **must** start with a capital.
 
 ```javascript
   // GOOD
