@@ -101,6 +101,7 @@
   }
 
 ```
+
 ```javascript
   // BAD
 
@@ -206,6 +207,7 @@
   if (x) return true;
 
 ```
+
 ```javascript
   // OK
 
@@ -236,6 +238,7 @@
   }
 
 ```
+
 ```javascript
   // BAD
 
