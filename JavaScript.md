@@ -27,13 +27,15 @@
 
 ```
 
-- **RULE**: Identifiers bound to a variable **must** be CamelCased, and start with a lowercase letter.
-
+- **RULE**: Identifiers bound to a variable or function **must** start with a *minuscule*.
+- **RULE**: Identifiers bound to a variable or function **must** be CamelCased or lowercase,
+  depending on their length.
 
 ```javascript
   // GOOD
 
   var someKindOfProcess = function () {};
+  var tmpvar = 42;
 
 ```
 
@@ -42,14 +44,18 @@
   // BAD
 
   var some_kind_of_process = function () {};
+  var somekindofprocess = function () {};
 
 ```
 
 ## Variable declarations
 
-- **RULE**: Always declare variables at the *top* of functions.
-- **REASON**: Variable declarations are moved up to the top of the function scope anyway,
-so that's where they belong.
+- **RULE**: Variables **must** always be declared, prior to use.
+- **RULE**: Variable declarations **should** appear at the top of functions,
+  and not inside other blocks. The exception is *for* loops.
+
+> Variable declarations are moved up to the top of the function scope anyway,
+> so that's where they belong.
 
 
 ```javascript
@@ -63,6 +69,8 @@ so that's where they belong.
       }
       ...
   }
+
+  for (var i = 0; i < l; i ++) { ... }
 
 ```
 
@@ -82,7 +90,8 @@ so that's where they belong.
 ## Control-flow
 
 - **RULE**: Control-flow statements, such as `if`, `while` and `for` **must** have a space between the keyword and the left parenthesis.
-- **REASON**: To differentiate them with function calls.
+
+> They aren't functions, and thus better distinguished like this.
 
 ```javascript
   // GOOD
@@ -103,8 +112,9 @@ so that's where they belong.
 
 ## Functions
 
-- **RULE**: Anonymous functions **should** have a space between the `function` keyword and the left parenthesis.
-- **REASON**: To emphasise the lack of identifier and differentiate them with named functions.
+- **RULE**: Anonymous functions **must** have a space between the `function` keyword and the left parenthesis.
+
+> To emphasise the lack of identifier and differentiate them with named functions.
 
 
 ```javascript
@@ -122,8 +132,8 @@ so that's where they belong.
 
 ```
 
-- **RULE**: Named functions **should not** have a space between the function name and the left parenthesis.
-- **REASON**: See above.
+- **RULE**: Named functions **must not** have a space between the function name and the left parenthesis.
+- **RULE**: Function calls **should not** have a space between the function name and the left parenthesis.
 
 
 ```javascript
@@ -144,7 +154,7 @@ so that's where they belong.
 ## Semicolons
 
 - **RULE**: Semicolons `;` **must** be added at the end of every statement, **except** when the next character is a closing bracket `}`.
-- **REASON**: That's what Jesus would have wanted.
+  In that case, they may be omitted.
 
 
 ```javascript
@@ -162,7 +172,6 @@ so that's where they belong.
   // BAD
 
   var f = function add (a, b) {
-      if (a == b) { return a * 2; }
       return a + b
   }
 
@@ -170,8 +179,8 @@ so that's where they belong.
 
 ## Braces
 
-- **RULE**: Braces **must** be used in all circumstances.
-- **REASON**: JavaScript uses braces to structure code.
+- **RULE**: Braces **should** be used in all circumstances. They **may** be omitted
+  around simple statements.
 
 
 ```javascript
@@ -181,23 +190,32 @@ so that's where they belong.
 
 ```
 
-
 ```javascript
   // BAD
+
+  if (x)
+    while (1)
+      i ++;
+  else
+    ...
+
+
+```javascript
+  // OK
 
   if (x) return true;
 
 ```
 ```javascript
-  // BAD
+  // OK
 
   if (x)
       return true;
 
 ```
-- **RULE**: Braces **must never** be on a line of their own.
-- **REASON**: It wastes screen space.
+- **RULE**: Opening Braces **must never** be on a line of their own.
 
+> Vertical screen space is precious.
 
 ```javascript
   // GOOD
